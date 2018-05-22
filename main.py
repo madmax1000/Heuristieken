@@ -1,7 +1,27 @@
 import helpers as helpers
+import time
 
 def main():
 
+    # for genomeLength in range(1, 30)
+    #     t0 = time.time()
+    #     genome = helpers.RandomMutation(50)
+    #     targetGenome = [i for i in range(len(genome))]
+
+
+
+    #     # keep track of the number of mutations
+    #     numberOfMutations = 0
+    #     print("Your original genome: ", genome)
+    #     # Execute Greedy until the genomes are equal
+    #     while genome != targetGenome:
+    #         numberOfMutations += 1
+    #         genomeObject = helpers.GenomeSequence(genome)
+    #         genome, i, j, deltaPHI = genomeObject.Mutate("Greedy")
+    #         print("Mutation number: ", numberOfMutations, " ", genome)
+    #     print("Your genome has been solved in ", numberOfMutations, " mutations!")
+
+    #     print(time.time() - t0)
     # let user choose the genome
     genome = []
     genomeInput = input("Which genome do you wish to sort? Type \"1\" for the D. Melanogaster genome, or type \"2\" for a random generated genome. Press Enter afterwards.\n")
