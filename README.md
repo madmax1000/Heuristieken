@@ -19,16 +19,27 @@ Zie hier een reversal:
 Een reversal wordt gekaraktiseerd door een indexkoppel (i, j). Hierbij is i de index van het linker gen van het stuk dat ge-reversed wordt, en j de index van het rechter gen van het stuk dat ge-reversed wordt.
 
 ## De challenges
-# Challenge 1: Bepaal een sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Bepaal ook de grenzen van de oplossingskwaliteit en de toestandsruimte.
+### Challenge 1: Bepaal een sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Bepaal ook de grenzen van de oplossingskwaliteit en de toestandsruimte.
 Voor deze challenge hoeft er dus geen rekening gehouden te worden met het aantal mutatiestappen dat nodig is om het genoom van D. Melanogaster in het genoom van D. Miranda te veranderen.
 We hebben gekozen voor het gebruik van het Bubble Sort Algoritme.
+Dit algoritme vindt een oplossing in 154(!) mutatiestappen.
+Zie de paragraaf "Run Code" voor hoe je Bubble Sort kunt runnen.
+
+### Challenge 2: Vind de "kortste" sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Als er meerdere kortste oplossingen zijn, vergelijk ze dan met elkaar.
+De 154 sequentie mutatiestappen die Bubble Sort heeft gevonden is zeer waarschijnlijk níet hoe de mutatiesequentie die daadwerkelijk heeft plaatsgevonden in de natuur.
+Het is meer aannemelijk dat er een korte sequentie van mutaties heeft plaatsgevonden.
+In deze challenge zoeken we naar de kortste sequentie mutaties.
+
+#### Greedy
 
 
-# Challenge 2: Vind de "kortste" sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Als er meerdere kortste oplossingen zijn, vergelijk ze dan met elkaar.
+
+#### Branch and Bound
 
 ## Aan de slag
 ### Vereisten
 Het programma is geschreven in python3.
+
 ### Run Code
 Om code uit te voeren:
 ```python
