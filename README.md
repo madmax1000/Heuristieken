@@ -7,9 +7,9 @@ Het kan dus gesteld worden dat wanneer er weinig mutaties zijn opgetreden tussen
 Datzelfde geldt voor de fruitvliegjes Drosophila Melanogaster en Drosophila Miranda. In deze opdracht is het zaak te achterhalen welke reeks van achtereenvolgende mutaties de ene fruitvliegensoort in de andere heeft doen veranderen.
 
 ## De genomen
-Het genoom van de D. Melanogaster ziet er als volgt uit: 
+Het genoom van de D. Melanogaster ziet er als volgt uit:
 [23, 1, 2, 11, 24, 22, 19, 6, 10, 7, 25, 20, 5, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9]
-Het genoom van de D. Miranda ziet er als volgt uit: 
+Het genoom van de D. Miranda ziet er als volgt uit:
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 Natuurlijk bestaan genomen in het echt niet uit getallen. Dit is echter een handige abstrahering om de opdracht uit te voeren.
 
@@ -39,14 +39,15 @@ Opbrengst hebben wij gedefinieerd als het aantal 'breakpoints' dat verwijderd wo
 Er kunnen op elk moment in het genoom óf 2, óf 1, óf 0 breakpoints verwijderd worden.
 Als er een mutatie mogelijk is waarbij er 2 breakpoints verwijderd kunnen worden, zal Greedy altijd kiezen om deze mutatie uit te voeren! Er is namelijk geen hogere
 opbrengst mogelijk. Als er geen 2 breakpoints verwijderd kunnen worden, zal Greedy kiezen om een mutatie uit te voeren die 1 breakpoint verwijdert. Het is belangrijk om te
-weten dat mutaties die een afnemende reeks getallen creëert, geprefereerd wordt boven een mutatie die een toenemde reeks getallen creëert. We refereren hierbij naar het paper dat wij voor deze opdracht hebben gebruikt: https://www2.cs.arizona.edu/~kece/Research/papers/KS95.ps
-  
-Greedy vindt een sequentie van 14 mutaties die het genoom van D. Melanogaster naar die van D. Miranda verandert. Een grote verbetering ten opzichte van Bubble Sort (154 mutaties).
+weten dat een mutatie die een afnemende reeks getallen creëert, geprefereerd wordt boven een mutatie die een toenemde reeks getallen creëert. We refereren hierbij naar het paper dat wij voor deze opdracht hebben gebruikt: https://www2.cs.arizona.edu/~kece/Research/papers/KS95.ps
+
+Greedy vindt in een minimale tijd (< 1 sec) een sequentie van 14 mutaties die het genoom van D. Melanogaster naar die van D. Miranda verandert. Een grote verbetering ten opzichte van Bubble Sort (154 mutaties).
+Zie de paragraaf "Run Code" voor hoe je Greedy kunt runnen.
 
 #### Branch and Bound
-Het probleem met Greedy is dat je niet zeker kan weten of de kortste sequentie mutaties gevonden is. Om daadwerkelijk de kortste sequentie mutaties te vinden gebruiken wij het Branch and Bound algoritme. 
-
-
+Het probleem met Greedy is dat je niet zeker kan weten of de kortste sequentie mutaties gevonden is. Om daadwerkelijk de kortste sequentie mutaties te vinden gebruiken wij het Branch and Bound algoritme.
+Dit algoritme vindt _gegarandeerd_ de korste sequentie mutaties! Dit gaat echter ten koste aan een zeer veel langere run-time.
+Zie de paragraaf "Run Code" voor hoe je Branch and Bound kunt runnen.
 
 ## Aan de slag
 ### Vereisten
@@ -57,14 +58,17 @@ Om code uit te voeren:
 ```python
 python main.py
 ```
-Vervolgens krijgt u de keuze om:
-1. Het genoom van de D. Melanogaster te gebruiken, of:
-2. Een random gegenereerd genoom van gewenste lengte te gebruiken.
 
-Hierna krijgt u de keuze uit verschillende algoritmes:
-1. Bubble Sort
-2. Greedy
-3. Branch and Bound
+U komt vervolgens in een keuzemenu.
+
+Allereerst kunt u kiezen welk genoom u wilt muteren:
+1) Het genoom van de D. Melanogaster, of
+2) Een random gegenereerd genoom van een door u opgegeven lengte.
+
+Vervolgens kunt u kiezen welk algoritme u wilt gebruiken om het genoom te sorteren:
+1) Bubble Sort
+2) Greedy
+3) Branch and Bound (Waarschuwing: lange run-time voor grote genomen)
 
 ## Auteurs
 * Max Bijkerk 10627510
