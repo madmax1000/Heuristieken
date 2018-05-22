@@ -8,16 +8,15 @@ Datzelfde geldt voor de fruitvliegjes Drosophila Melanogaster en Drosophila Mira
 
 ## De genomen
 Het genoom van de D. Melanogaster ziet er als volgt uit:<br />
-[23, 1, 2, 11, 24, 22, 19, 6, 10, 7, 25, 20, 5, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9]<br />
+[23, 1, 2, 11, 24, 22, 19, 6, 10, 7, 25, 20, 5, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9]<br /><br />
 Het genoom van de D. Miranda ziet er als volgt uit:<br />
-[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]<br />
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]<br /><br />
 Natuurlijk bestaan genomen in het echt niet uit getallen. Dit is echter een handige abstrahering om de opdracht uit te voeren.
 
 ## Mutaties
-Mutaties kunnen enkel op één manier plaatsvinden, namelijk door 'reversals'.
-Tijdens een reversal wordt een bepaald stukje binnen een genoom in zijn geheel omgekeerd.
-Zie hier een reversal:
-(4 5 - 3 2 1 6 - 7 9) --> (4 5 - 6 1 2 3 - 7 9) (mutatie tussen streepjes)
+Mutaties kunnen enkel op één manier plaatsvinden, namelijk door 'reversals'. Tijdens een reversal wordt een bepaald stukje binnen een genoom in zijn geheel omgekeerd.<br />
+Zie hier een reversal:<br />
+(4 5 - 3 2 1 6 - 7 9) --> (4 5 - 6 1 2 3 - 7 9) (mutatie tussen streepjes)<br /><br />
 Een reversal wordt gekaraktiseerd door een indexkoppel (i, j). Hierbij is i de index van het linker gen van het stuk dat ge-reversed wordt, en j de index van het rechter gen van het stuk dat ge-reversed wordt.
 
 ## De challenges
