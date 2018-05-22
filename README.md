@@ -21,7 +21,7 @@ Een reversal wordt gekaraktiseerd door een indexkoppel (i, j). Hierbij is i de i
 ## De challenges
 ### Challenge 1: Bepaal een sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Bepaal ook de grenzen van de oplossingskwaliteit en de toestandsruimte.
 Voor deze challenge hoeft er dus geen rekening gehouden te worden met het aantal mutatiestappen dat nodig is om het genoom van D. Melanogaster in het genoom van D. Miranda te veranderen.
-We hebben gekozen voor het gebruik van het Bubble Sort Algoritme.
+We hebben gekozen voor het gebruik van het Bubble Sort algoritme.
 Dit algoritme vindt een oplossing in 154(!) mutatiestappen.
 Zie de paragraaf "Run Code" voor hoe je Bubble Sort kunt runnen.
 
@@ -31,7 +31,16 @@ Het is meer aannemelijk dat er een korte sequentie van mutaties heeft plaatsgevo
 In deze challenge zoeken we naar de kortste sequentie mutaties.
 
 #### Greedy
+Het Greedy algoritme kijkt na elke mutatie welke mutatie op dat specifieke moment de hoogste 'opbrengst' levert.
+Opbrengst hebben wij gedefinieerd als het aantal 'breakpoints' dat verwijderd wordt. Een breakpoint is gedefinieerd als een indexkoppel (i, i + 1) waarvoor geldt:
+#### abs(genoom[i] + genoom[i + 1]) != 1
+Er kunnen op elk moment in het genoom óf 2, óf 1, óf 0 breakpoints verwijderd worden.
+Als er een mutatie mogelijk is waarbij er 2 breakpoints verwijderd kunnen worden, zal Greedy altijd kiezen om deze mutatie uit te voeren! Er is namelijk geen hogere
+opbrengst mogelijk. Als er geen 2 breakpoints verwijderd kunnen worden, zal Greedy kiezen om een mutatie uit te voeren die 1 breakpoint verwijdert. Het is belangrijk om te
+weten dat mutaties die een afnemende reeks getallen creëert, geprefereerd wordt boven een mutatie die een toenemde reeks getallen creëert. We refereren hierbij naar het paper
+dat wij voor deze opdracht hebben gebruikt: https://www2.cs.arizona.edu/~kece/Research/papers/KS95.ps
 
+Greedy vindt een sequentie van 14 mutaties die het genoom van D. Melanogaster naar die van D. Miranda verandert. Een grote verbetering ten opzichte van Bubble Sort (154 mutaties).
 
 
 #### Branch and Bound
