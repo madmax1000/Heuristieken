@@ -16,14 +16,19 @@ zo min mogelijk aantal stappen.
 ## Aan de slag
 ### Vereisten
 Het programma is geschreven in python3.
-### Testen
-Om code te draaien:
+### Run Code
+Om code uit te voeren:
 ```python
-python bubblesort.py
+python main.py
 ```
-```python
-python greedyAlgorithm.py
-```
+Vervolgens krijgt u de keuze om:
+1. Het genoom van de D. Melanogaster te gebruiken, of:
+2. Een random gegenereerd genoom van gewenste lengte te gebruiken.
+
+Hierna krijgt u de keuze uit verschillende algoritmes:
+1. Bubble Sort
+2. Greedy
+3. Branch and Bound
 
 ## Auteurs
 * Max Bijkerk 10627510
