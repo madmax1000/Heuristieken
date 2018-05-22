@@ -78,17 +78,23 @@ def main():
 
                 print("BRANCH AND BOUND ALGORITHM STARTS\n")
 
+                # initialize empty arrays
                 current = [0] * 32
                 best = []
 
+                # initialize genomeObject with its breakpointPairs
                 genomeObject = helpers.GenomeSequence(genome)
                 breakpointPairs = genomeObject.breakpointPairs
 
+                # start Branch and Bound!
                 upperBound, current, best = helpers.BnB(genomeObject, 0, 30, current, best, breakpointPairs, targetGenome)
+
+                # store the shortest sequence of mutations
                 best = best[:upperBound]
 
                 print("\nThe Branch and Bound algorithm has finished. The shortest solution possibile equals ", len(best))
-                print("This sequence of mutations (i,j) looks like: ", best)
+                print("Your original genome equals: ", genome)
+                print("The shortest sequence of mutations (i,j) equals: ", best)
                 print("Executing this very sequence of mutations on the original genome results in the following intermediate genomes: ")
 
                 numberOfMutations = 0

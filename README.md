@@ -58,7 +58,6 @@ Om code uit te voeren:
 ```python
 python main.py
 ```
-
 U komt vervolgens in een keuzemenu.
 
 Allereerst kunt u kiezen welk genoom u wilt muteren:
@@ -68,7 +67,7 @@ Allereerst kunt u kiezen welk genoom u wilt muteren:
 Vervolgens kunt u kiezen welk algoritme u wilt gebruiken om het genoom te sorteren:
 1) Bubble Sort
 2) Greedy
-3) Branch and Bound (Waarschuwing: lange run-time voor grote genomen)
+3) Branch and Bound (Waarschuwing: lange run-time voor grote genomen. Een genoomlengte van 10 is prima voor test doeleinden)
 
 ## Auteurs
 * Max Bijkerk 10627510
