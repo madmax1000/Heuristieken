@@ -22,30 +22,26 @@ Een reversal wordt gekaraktiseerd door een indexkoppel (i, j). Hierbij is i de i
 ## De challenges
 ### Challenge 1: Bepaal een sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Bepaal ook de grenzen van de oplossingskwaliteit en de toestandsruimte.
 Voor deze challenge hoeft er dus geen rekening gehouden te worden met het aantal mutatiestappen dat nodig is om het genoom van D. Melanogaster in het genoom van D. Miranda te veranderen.
-We hebben gekozen voor het gebruik van het Bubble Sort algoritme.
-Dit algoritme vindt een oplossing in 154(!) mutatiestappen.
+We hebben gekozen voor het gebruik van het Bubble Sort algoritme.<br />
+Dit algoritme vindt een oplossing in 154(!) mutatiestappen.<br />
 Zie de paragraaf "Run Code" voor hoe je Bubble Sort kunt runnen.
 
 ### Challenge 2: Vind de "kortste" sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Als er meerdere kortste oplossingen zijn, vergelijk ze dan met elkaar.
-De 154 sequentie mutatiestappen die Bubble Sort heeft gevonden is zeer waarschijnlijk níet hoe de mutatiesequentie die daadwerkelijk heeft plaatsgevonden in de natuur.
-Het is meer aannemelijk dat er een korte sequentie van mutaties heeft plaatsgevonden.
-In deze challenge zoeken we naar de kortste sequentie mutaties.
+De 154 sequentie mutatiestappen die Bubble Sort heeft gevonden is zeer waarschijnlijk níet hoe de mutatiesequentie die daadwerkelijk heeft plaatsgevonden in de natuur. Het is meer aannemelijk dat er een korte sequentie van mutaties heeft plaatsgevonden.<br />
+In deze challenge zoeken we naar de *kortste* sequentie mutaties.<br /><br />
 
 #### Greedy
-Het Greedy algoritme kijkt na elke mutatie welke mutatie op dat specifieke moment de hoogste 'opbrengst' levert.
-Opbrengst hebben wij gedefinieerd als het aantal 'breakpoints' dat verwijderd wordt. Een breakpoint is gedefinieerd als een indexkoppel (i, i + 1) waarvoor geldt:
-#### abs(genoom[i] + genoom[i + 1]) != 1
-Er kunnen op elk moment in het genoom óf 2, óf 1, óf 0 breakpoints verwijderd worden.
-Als er een mutatie mogelijk is waarbij er 2 breakpoints verwijderd kunnen worden, zal Greedy altijd kiezen om deze mutatie uit te voeren! Er is namelijk geen hogere
-opbrengst mogelijk. Als er geen 2 breakpoints verwijderd kunnen worden, zal Greedy kiezen om een mutatie uit te voeren die 1 breakpoint verwijdert. Het is belangrijk om te
-weten dat een mutatie die een afnemende reeks getallen creëert, geprefereerd wordt boven een mutatie die een toenemde reeks getallen creëert. We refereren hierbij naar het paper dat wij voor deze opdracht hebben gebruikt: https://www2.cs.arizona.edu/~kece/Research/papers/KS95.ps
-
-Greedy vindt in een minimale tijd (< 1 sec) een sequentie van 14 mutaties die het genoom van D. Melanogaster naar die van D. Miranda verandert. Een grote verbetering ten opzichte van Bubble Sort (154 mutaties).
+Het Greedy algoritme kijkt na elke mutatie welke mutatie op dat specifieke moment de hoogste 'opbrengst' levert. Opbrengst hebben wij gedefinieerd als het aantal 'breakpoints' dat verwijderd wordt. Een breakpoint is gedefinieerd als een indexkoppel (i, i + 1) waarvoor geldt: __abs(genoom[i] + genoom[i + 1]) != 1__<br />
+Er kunnen op elk moment in het genoom óf 2, óf 1, óf 0 breakpoints verwijderd worden.<br />
+Als er een mutatie mogelijk is waarbij er 2 breakpoints verwijderd kunnen worden, zal Greedy altijd kiezen om deze mutatie uit te voeren! Er is namelijk geen hogere opbrengst mogelijk.<br />
+Als er geen 2 breakpoints verwijderd kunnen worden, zal Greedy kiezen om een mutatie uit te voeren die 1 breakpoint verwijdert. Het is belangrijk om te weten dat een mutatie die een afnemende reeks getallen creëert, geprefereerd wordt boven een mutatie die een toenemde reeks getallen creëert. We refereren hierbij naar het paper dat wij voor deze opdracht hebben gebruikt: https://www2.cs.arizona.edu/~kece/Research/papers/KS95.ps
+<br /><br />
+Greedy vindt in een minimale tijd (< 1 sec) een sequentie van 14 mutaties die het genoom van D. Melanogaster naar die van D. Miranda verandert. Een grote verbetering ten opzichte van Bubble Sort (154 mutaties).<br />
 Zie de paragraaf "Run Code" voor hoe je Greedy kunt runnen.
 
 #### Branch and Bound
-Het probleem met Greedy is dat je niet zeker kan weten of de kortste sequentie mutaties gevonden is. Om daadwerkelijk de kortste sequentie mutaties te vinden gebruiken wij het Branch and Bound algoritme.
-Dit algoritme vindt _gegarandeerd_ de korste sequentie mutaties! Dit gaat echter ten koste aan een zeer veel langere run-time.
+Het probleem met Greedy is dat je niet zeker kan weten of de kortste sequentie mutaties gevonden is. Om daadwerkelijk de kortste sequentie mutaties te vinden gebruiken wij het Branch and Bound algoritme.<br />
+Dit algoritme vindt _gegarandeerd_ de korste sequentie mutaties! Dit gaat echter ten koste aan een zeer veel langere run-time.<br /><br />
 Zie de paragraaf "Run Code" voor hoe je Branch and Bound kunt runnen.
 
 ## Aan de slag
