@@ -1,17 +1,30 @@
 # Heuristieken
 
-## Fruitvliegen genoom
+## Twee fruitvliegjes
+De genomen van twee dieren die aan nauw aan elkaar verwant zijn, zullen meer overeenkomen dan de genomen van dieren die dit niet zijn.
+Verschillen tussen genomen van nauw verwante dieren zijn er echter wel. Mutaties hebben hiervoor gezorgd.
+Het kan dus gesteld worden dat wanneer er weinig mutaties zijn opgetreden tussen de genomen van twee dieren, deze dieren nauw aan elkaar verwant zijn.
+Datzelfde geldt voor de fruitvliegjes Drosophila Melanogaster en Drosophila Miranda. In deze opdracht is het zaak te achterhalen welke reeks van achtereenvolgende mutaties de ene fruitvliegensoort in de andere heeft doen veranderen.
 
-Het genoom van dieren die aan elkaar nauw aan elkaar verwant zijn zal meer overeenkomen met elkaar dan dieren die dit niet zijn.
-Mutaties hebben voor deze verschillen gezorgd, dus er kan ook gesteld worden dat wanneer er weinig mutaties zijn opgetreden tussen 2
-genomen, de dieren nauw aan elkaar verwant is. In onze case worden genoom sequenties met elkaar vergeleken en ons doel is het om de korst
-mogelijke sequentie van mutaties te vinden als indicator van hoe verwant soorten aan elkaar zijn.
+## De genomen
+Het genoom van de D. Melanogaster ziet er als volgt uit: [23, 1, 2, 11, 24, 22, 19, 6, 10, 7, 25, 20, 5, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9]
+Het genoom van de D. Miranda ziet er als volgt uit: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+Natuurlijk bestaan genomen in het echt niet uit getallen. Dit is echter een handige abstrahering om de opdracht uit te voeren.
 
-Er wordt door ons enkel naar één soort mutatie gekeken, namelijk een 'flip' mutatie waarin een bepaald stukje genoom helemaal is
-omgekeerd. (4 5 - 3 2 1 6 - 7 9) -> (4 5 - 6 1 2 3 - 7 9) (mutatie tussen streepjes)
+## Mutaties
+Mutaties kunnen enkel op één manier plaatsvinden, namelijk door 'reversals'.
+Tijdens een reversal wordt een bepaald stukje binnen een genoom in zijn geheel omgekeerd.
+Zie hier een reversal:
+(4 5 - 3 2 1 6 - 7 9) --> (4 5 - 6 1 2 3 - 7 9) (mutatie tussen streepjes)
+Een reversal wordt gekaraktiseerd door een indexkoppel (i, j). Hierbij is i de index van het linker gen van het stuk dat ge-reversed wordt, en j de index van het rechter gen van het stuk dat ge-reversed wordt.
 
-De genoom sequentie zal gezien worden als een volgorde van getallen die door een algoritme in een oplopende volgorde geplaatst moet worden in
-zo min mogelijk aantal stappen.
+## De challenges
+# Challenge 1: Bepaal een sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Bepaal ook de grenzen van de oplossingskwaliteit en de toestandsruimte.
+Voor deze challenge hoeft er dus geen rekening gehouden te worden met het aantal mutatiestappen dat nodig is om het genoom van D. Melanogaster in het genoom van D. Miranda te veranderen.
+We hebben gekozen voor het gebruik van het Bubble Sort Algoritme.
+
+
+# Challenge 2: Vind de "kortste" sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Als er meerdere kortste oplossingen zijn, vergelijk ze dan met elkaar.
 
 ## Aan de slag
 ### Vereisten
