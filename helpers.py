@@ -1,5 +1,4 @@
 import math
-import scipy
 from random import shuffle
 import copy
 
@@ -181,7 +180,7 @@ class GenomeSequence:
                                 if temporaryGenome[i - 1] > temporaryGenome[i] or temporaryGenome[j] > temporaryGenome[j + 1]:
 
                                     # if descending AND deltaPHI = 2, we've found our best option already!
-                                    return temporaryGenome
+                                    return temporaryGenome, i, j, deltaPHI
 
                                 # if not descending, store the option and continue revising the
                                 # other options
@@ -238,10 +237,9 @@ class GenomeSequence:
 
             # therefore, the array should be reversed
             mutateOptions = list(reversed(mutateOptions))
-
             # execute the first posssible option, because this is now the best one!
             # (because descending options come first in the array)
-            return self.Reverse(mutateOptions[0][0], mutateOptions[0][1])
+            return self.Reverse(mutateOptions[0][0], mutateOptions[0][1]), mutateOptions[0][0], mutateOptions[0][1], mutateOptions[0][2]
 
         # if method is B&B, return all options
         else:

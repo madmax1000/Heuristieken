@@ -54,15 +54,19 @@ def main():
 
             print("GREEDY ALGORITHM STARTS\n")
 
+            # store Greedy's history in the form (i, j, deltaPHI)
+            history = []
+
+            # keep track of the number of mutations
             numberOfMutations = 0
 
             # Execute Greedy until the genomes are equal
             while genome != targetGenome:
                 numberOfMutations += 1
                 genomeObject = helpers.GenomeSequence(genome)
-                genome = genomeObject.Mutate("Greedy")
+                genome, i, j, deltaPHI = genomeObject.Mutate("Greedy")
+                history.append([i, j, deltaPHI])
                 print("Mutation number: ", numberOfMutations, " ", genome)
-
             print("Your genome has been solved in ", numberOfMutations, " mutations!")
 
         if method == "BnB":
