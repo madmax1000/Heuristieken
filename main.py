@@ -1,5 +1,6 @@
-import helpers as helpers
+import helpers
 import time
+import GenomeSequence as genomeClass
 
 # hoofdletters voor functies (functies in class kleine letter), aparte file voor class / def class op volgorde / resultaten folder in repo
 
@@ -67,7 +68,7 @@ def main():
             print("START CONFIRMED\n")
 
             print("BUBBLE ALGORITHM STARTS\n")
-            numberOfMutations = helpers.bubblesort(genome)
+            numberOfMutations = helpers.Bubblesort(genome)
 
             print("Your genome has been solved in ", numberOfMutations, " mutations!")
 
@@ -85,7 +86,7 @@ def main():
             # Execute Greedy until the genomes are equal
             while genome != targetGenome:
                 numberOfMutations += 1
-                genomeObject = helpers.GenomeSequence(genome)
+                genomeObject = genomeClass.GenomeSequence(genome)
                 genome, i, j, deltaPHI = genomeObject.Mutate("Greedy")
                 history.append([i, j, deltaPHI])
                 print("Mutation number: ", numberOfMutations, " ", genome)
@@ -105,7 +106,7 @@ def main():
                 best = []
 
                 # initialize genomeObject with its breakpointPairs
-                genomeObject = helpers.GenomeSequence(genome)
+                genomeObject = genomeClass.GenomeSequence(genome)
                 breakpointPairs = genomeObject.breakpointPairs
 
                 # start Branch and Bound!
