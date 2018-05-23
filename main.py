@@ -1,6 +1,8 @@
 import helpers as helpers
 import time
 
+# hoofdletters voor functies (functies in class kleine letter), aparte file voor class / def class op volgorde / resultaten folder in repo
+
 def main():
 
     # for genomeLength in range(1, 30)

@@ -244,10 +244,8 @@ class GenomeSequence:
         # if method is B&B, return all options
         else:
             # print("return", eliminate_2_breakpoint, eliminate_1_breakpoint, eliminate_0_breakpoint)
-            return eliminate_2_breakpoint, eliminate_1_breakpoint, eliminate_0_breakpoint#, eliminate_min_1_breakpoint, eliminate_min_2_breakpoint
+            return eliminate_2_breakpoint, eliminate_1_breakpoint#, eliminate_0_breakpoint#, eliminate_min_1_breakpoint, eliminate_min_2_breakpoint
 
-    def lowerBoundPoints(self):
-        scipy.spatial.distance.cdist
 
 def LowerBound(breakpointpairsCurrent):
     return math.ceil(breakpointpairsCurrent / 2)
@@ -297,8 +295,8 @@ def BnB(genomeObj, depth, upperBound, current, best, breakpointPairs, targetGeno
 
             best = []
             upperBound, best = depth, current
-            #print("Updated upperBound: ", upperBound)
-            #print("Updated best: ", best)
+            print("Updated upperBound: ", upperBound)
+            print("Updated best: ", best)
 
             #print("Return: upperbound, current, best")
 
@@ -324,7 +322,7 @@ def BnB(genomeObj, depth, upperBound, current, best, breakpointPairs, targetGeno
             breakpointPairsCurrent = breakpointPairs - abs(optionList - 2)
 
             lowerBound = LowerBound(breakpointPairsCurrent) + depth + 2
-            print("--Depth = " ,depth)
+            # print("--Depth = " ,depth)
 
             if lowerBound <= upperBound:
                 for option in allOptions[optionList]:
