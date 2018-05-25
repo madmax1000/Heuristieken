@@ -47,6 +47,13 @@ Zie de paragraaf "Aan de slag" voor hoe je Branch and Bound kunt runnen.
 #### Random-Greedy-Branch and Bound
 Voor ons derde algoritme is een zelf bedachte constructie gebruikt. We wilden het aspect dat Branch and Bound altijd zorgt voor de allerbeste oplossing behouden. Het probleem dat we nu moesten oplossen is dus de run time veel te lang is bij lange (lengte 23 +) genomen. Als oplossing hiervoor laten we de Branch and Bound pas runnen vanaf genomen, die een door ons ingesteld aantal breakpoints zijn verwijdert vanaf een genoom wat volledig op volgorde staat. Om te komen op het punt waarop het branch and bound algoritme te runnen, zal er eerst vanaf et originele genoom een random mutatie gekozen worden, welke vervolgens zal worden gemuteerd via greedy, tot het punt waarop de branch and bound kan worden ingezet. Vervolgens wordt op de volgende depth vanaf het originele genoom een nieuwe random mutatie gekozen vervolgt door greedy-branch and bound. Dit blijft doorgaan tot de grens van de branch and bound waarna vervolgens een nieuwe eerste mutatie wordt gekozen vanaf het originele genoom.
 
+#### Greedy Points
+Dit algoritme is bedoelt om genoom sequenties op te lossen in een laag aantal mutatie punten. Het werkt op dezelfde manier als ons vorig greedy algoritme, het enige verschil is dat we hier steeds de mutatie kiezen die het meest aantal breakpoints oplossen voor het minst aantal punten.
+
+#### Random-Greedy Points
+Dit is ons tweede algoritme om genoom seuquenties op te lossen in een laag aantal mutatie punten. Het algoritme lijkt op het Random-Greedy-Branch and Bound algoritme, het verschil hier is dat we de branch and bound niet gebruiken, aangezien dit niet werkt voor mutatie punnten. 
+
+
 ## Aan de slag
 ### Vereisten
 Het programma is geschreven in python3.
