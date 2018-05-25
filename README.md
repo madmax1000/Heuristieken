@@ -44,6 +44,9 @@ Het probleem met Greedy is dat je niet zeker kan weten of de kortste sequentie m
 Dit algoritme vindt _gegarandeerd_ de korste sequentie mutaties! Dit gaat echter ten koste aan een zeer veel langere run-time.<br /><br />
 Zie de paragraaf "Aan de slag" voor hoe je Branch and Bound kunt runnen.
 
+#### Random-Greedy-Branch and Bound
+Branch and bound vind zeker het best aantal mutaties
+
 ## Aan de slag
 ### Vereisten
 Het programma is geschreven in python3.
