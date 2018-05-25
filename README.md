@@ -45,12 +45,13 @@ Dit algoritme vindt _gegarandeerd_ de korste sequentie mutaties! Dit gaat echter
 Zie de paragraaf "Aan de slag" voor hoe je Branch and Bound kunt runnen.
 
 #### Random-Greedy-Branch and Bound
-Branch and bound vind zeker het best aantal mutaties
+Voor ons derde algoritme is een zelf bedachte constructie gebruikt. We wilden het aspect dat Branch and Bound altijd zorgt voor de allerbeste oplossing behouden. Het probleem dat we nu moesten oplossen is dus de run time veel te lang is bij lange (lengte 23 +) genomen. Als oplossing hiervoor laten we de Branch and Bound pas runnen vanaf genomen, die een door ons ingesteld aantal breakpoints zijn verwijdert vanaf een genoom wat volledig op volgorde staat. Om te komen op het punt waarop het branch and bound algoritme te runnen, zal er eerst vanaf et originele genoom een random mutatie gekozen worden, welke vervolgens zal worden gemuteerd via greedy, tot het punt waarop de branch and bound kan worden ingezet. Vervolgens wordt op de volgende depth vanaf het originele genoom een nieuwe random mutatie gekozen vervolgt door greedy-branch and bound. Dit blijft doorgaan tot de grens van de branch and bound waarna vervolgens een nieuwe eerste mutatie wordt gekozen vanaf het originele genoom.
 
 ## Aan de slag
 ### Vereisten
 Het programma is geschreven in python3.
 
+Python libraries: math, copy, random, time, matplotlib
 ### Run Code
 Om code uit te voeren:
 ```python
@@ -66,6 +67,7 @@ Hierna kunt u kiezen welk algoritme u wilt gebruiken om het genoom te sorteren:
 1) Bubble Sort
 2) Greedy
 3) Branch and Bound (Waarschuwing: lange run-time voor grote genomen. Een genoomlengte van 10 is prima voor test doeleinden)
+4) Random-Greedy-Branch and bound
 
 Als u vervolgens een bevestiging geeft, wordt het algoritme gestart. U kunt real-time meekijken en het proces volgen. Wanneer het algoritme klaar is, worden de uitkomsten weergeven.
 
