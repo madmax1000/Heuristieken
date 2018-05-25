@@ -4,8 +4,7 @@ import GenomeSequence as genomeClass
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-# hoofdletters voor functies (functies in class kleine letter), aparte file voor class / def class op volgorde / resultaten folder in repo
-
+# (lees over dit heen: randomGreedyPoints = hillclimber)
 def main():
 
     # let user choose what he/she wants to do
@@ -38,7 +37,7 @@ def main():
 
             # let user choose the algorithm
             method = ""
-            methodInput = input("Which mutating algorithm do you want to use? \nType \"1\" for Bubble Sort \nType \"2\" for Greedy \nType \"3\" for Branch and Bound \nType \"4\" for Hillclimber.\nPress Enter afterwards. \n")
+            methodInput = input("Which mutating algorithm do you want to use? \nType \"1\" for Bubble Sort \nType \"2\" for Greedy \nType \"3\" for Branch and Bound \nType \"4\" for Random-Greedy-Branch and Bound.\nPress Enter afterwards. \n")
 
             if methodInput == '1':
                 method = "Bubble"
@@ -51,8 +50,8 @@ def main():
                 print("You've chosen to use Branch and Bound.\n")
             elif methodInput == '4':
                 method = "Hillclimber"
-                print ( "You've chosen to use Hillclimber.\n" )
-                numberOfSteps = input ( "Type a positive number of iterations. Press enter afterwards.\n" )
+                print ( "You've chosen to use Random-Greedy-Branch and Bound.\n" )
+                numberOfSteps = input ( "Type a positive number of steps. Press enter afterwards.\n" )
 
             else:
                 print("Run the program again and follow the instructions this time!\n")
@@ -139,7 +138,7 @@ def main():
         elif stepsOrPoints == '2':
             # let user choose the algorithm
             method = ""
-            methodInput = input ("Which mutating algorithm do you want to use? \nType \"1\" for Greedy \nType \"2\" for Hillclimber. Press Enter afterwards. \n" )
+            methodInput = input ("Which mutating algorithm do you want to use? \nType \"1\" for Greedy \nType \"2\" for Random-Greedy. Press Enter afterwards. \n" )
 
             scoreFunction = input ("Which score function do you wish to use? \nType \"1\" for 'n' \nType \"2\" for 0.5*n^2. Press Enter afterwards.\n" )
 
@@ -156,7 +155,7 @@ def main():
 
             elif methodInput == '2':
                 method = "Hillclimber"
-                print("You've chosen to use Hillclimber.\n")
+                print("You've chosen to use Random-Greedy.\n")
                 iterations = int(input("How many iterations do you wish the algorithm to execute? (500 is fine for testing)\n"))
 
             else:
