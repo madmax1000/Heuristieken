@@ -1,4 +1,18 @@
 # Heuristieken
+## Aan de slag
+### Vereisten
+Het programma is geschreven in python3.
+
+Python libraries: math, copy, random, time, matplotlib
+### Run Code
+Om code uit te voeren:
+```python
+python main.py
+```
+U komt vervolgens in een keuzemenu dat voor zichzelf spreekt.
+
+Veel plezier met muteren!
+
 
 ## Twee fruitvliegjes
 De genomen van twee dieren die aan nauw aan elkaar verwant zijn, zullen meer overeenkomen dan de genomen van dieren die dit niet zijn.
@@ -54,31 +68,7 @@ Dit algoritme is bedoelt om genoom sequenties op te lossen in een laag aantal mu
 Dit is ons tweede algoritme om genoom seuquenties op te lossen in een laag aantal mutatie punten. Het algoritme lijkt op het Random-Greedy-Branch and Bound algoritme, het verschil hier is dat we de branch and bound niet gebruiken, aangezien dit niet werkt voor mutatie punnten. 
 
 
-## Aan de slag
-### Vereisten
-Het programma is geschreven in python3.
 
-Python libraries: math, copy, random, time, matplotlib
-### Run Code
-Om code uit te voeren:
-```python
-python main.py
-```
-U komt vervolgens in een keuzemenu.
-
-Allereerst kunt u kiezen welk genoom u wilt muteren:
-1) Het genoom van de D. Melanogaster, of
-2) Een random gegenereerd genoom van een door u opgegeven lengte.
-
-Hierna kunt u kiezen welk algoritme u wilt gebruiken om het genoom te sorteren:
-1) Bubble Sort
-2) Greedy
-3) Branch and Bound (Waarschuwing: lange run-time voor grote genomen. Een genoomlengte van 10 is prima voor test doeleinden)
-4) Random-Greedy-Branch and bound
-
-Als u vervolgens een bevestiging geeft, wordt het algoritme gestart. U kunt real-time meekijken en het proces volgen. Wanneer het algoritme klaar is, worden de uitkomsten weergeven.
-
-Veel plezier met muteren!
 
 
 ## Auteurs
