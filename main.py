@@ -38,7 +38,7 @@ def main():
 
             # let user choose the algorithm
             method = ""
-            methodInput = input("Which mutating algorithm do you want to use? \nType \"1\" for Bubble Sort \nType \"2\" for Greedy \nType \"3\" for Branch and Bound \nType \"4\" for Hillclimber. Press Enter afterwards. \n")
+            methodInput = input("Which mutating algorithm do you want to use? \nType \"1\" for Bubble Sort \nType \"2\" for Greedy \nType \"3\" for Branch and Bound \nType \"4\" for Hillclimber.\nPress Enter afterwards. \n")
 
             if methodInput == '1':
                 method = "Bubble"
@@ -52,6 +52,8 @@ def main():
             elif methodInput == '4':
                 method = "Hillclimber"
                 print ( "You've chosen to use Hillclimber.\n" )
+                numberOfSteps = input ( "Type a positive number of iterations. Press enter afterwards.\n" )
+
             else:
                 print("Run the program again and follow the instructions this time!\n")
 
@@ -129,8 +131,6 @@ def main():
                         print("Run the program again and follow the instructions this time!\n")
 
                 if method == "Hillclimber":
-                    numberOfSteps = input ( "Type a positive number of iterations. Press enter afterwards.\n" )
-
                     helpers.Hillclimber ( genome, numberOfSteps )
 
             else:
