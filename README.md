@@ -13,7 +13,7 @@ U komt vervolgens in een keuzemenu dat voor zichzelf spreekt.
 
 Veel plezier met muteren!
 
-
+## Korte beschrijving van de challenge
 ## Twee fruitvliegjes
 De genomen van twee dieren die aan nauw aan elkaar verwant zijn, zullen meer overeenkomen dan de genomen van dieren die dit niet zijn.
 Verschillen tussen genomen van nauw verwante dieren zijn er echter wel. Mutaties hebben hiervoor gezorgd.
