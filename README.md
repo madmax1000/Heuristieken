@@ -33,17 +33,8 @@ Zie hier een reversal:<br />
 (4 5 - 3 2 1 6 - 7 9) --> (4 5 - 6 1 2 3 - 7 9) (mutatie tussen streepjes)<br /><br />
 Een reversal wordt gekaraktiseerd door een indexkoppel (i, j). Hierbij is i de index van het linker gen van het stuk dat ge-reversed wordt, en j de index van het rechter gen van het stuk dat ge-reversed wordt.
 
-## De challenges
-### Challenge 1: Bepaal een sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Bepaal ook de grenzen van de oplossingskwaliteit en de toestandsruimte.
-Voor deze challenge hoeft er dus geen rekening gehouden te worden met het aantal mutatiestappen dat nodig is om het genoom van D. Melanogaster in het genoom van D. Miranda te veranderen.
-We hebben gekozen voor het gebruik van het Bubble Sort algoritme.<br />
-Dit algoritme vindt een oplossing in 154(!) mutatiestappen.<br />
-Zie de paragraaf "Aan de slag" voor hoe je Bubble Sort kunt runnen.
 
-### Challenge 2: Vind de "kortste" sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Als er meerdere kortste oplossingen zijn, vergelijk ze dan met elkaar.
-De 154 sequentie mutatiestappen die Bubble Sort heeft gevonden is zeer waarschijnlijk níet hoe de mutatiesequentie die daadwerkelijk heeft plaatsgevonden in de natuur. Het is meer aannemelijk dat er een korte sequentie van mutaties heeft plaatsgevonden.<br />
-In deze challenge zoeken we naar de *kortste* sequentie mutaties.<br />
-
+## De algoritmes
 #### Greedy
 Het Greedy algoritme kijkt na elke mutatie welke mutatie op dat specifieke moment de hoogste 'opbrengst' levert. Opbrengst hebben wij gedefinieerd als het aantal 'breakpoints' dat verwijderd wordt. Een breakpoint is gedefinieerd als een indexkoppel (i, i + 1) waarvoor geldt: __abs(genoom[i] - genoom[i + 1]) != 1__<br />
 Er kunnen op elk moment in het genoom óf 2, óf 1, óf 0 breakpoints verwijderd worden.<br />
@@ -66,9 +57,6 @@ Dit algoritme is bedoelt om genoom sequenties op te lossen in een laag aantal mu
 
 #### Random-Greedy Points
 Dit is ons tweede algoritme om genoom seuquenties op te lossen in een laag aantal mutatie punten. Het algoritme lijkt op het Random-Greedy-Branch and Bound algoritme, het verschil hier is dat we de branch and bound niet gebruiken, aangezien dit niet werkt voor mutatie punnten. 
-
-
-
 
 
 ## Auteurs
