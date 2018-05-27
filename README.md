@@ -56,7 +56,7 @@ Voor ons derde algoritme is een zelf bedachte constructie gebruikt. We wilden he
 Dit algoritme is bedoelt om genoom sequenties op te lossen in een laag aantal mutatie punten. Het werkt op dezelfde manier als ons vorig greedy algoritme, het enige verschil is dat we hier steeds de mutatie kiezen die het meest aantal breakpoints oplossen voor het minst aantal punten.
 
 #### Random-Greedy Points
-Dit is ons tweede algoritme om genoom seuquenties op te lossen in een laag aantal mutatie punten. Het algoritme lijkt op het Random-Greedy-Branch and Bound algoritme, het verschil hier is dat we de branch and bound niet gebruiken, aangezien dit niet werkt voor mutatie punnten. 
+Dit is ons tweede algoritme om genoom sequenties op te lossen in een laag aantal mutatie punten. Het algoritme lijkt op het Random-Greedy-Branch and Bound algoritme, het verschil hier is dat we de branch and bound niet gebruiken, aangezien dit niet werkt voor mutatie punnten. 
 
 
 ## Auteurs
