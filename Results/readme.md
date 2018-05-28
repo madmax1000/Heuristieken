@@ -286,8 +286,8 @@ __This sequence of mutations has been solved in: 77  points!__
 <br />
 Voor scorefunctie __1/2 n^2__ (links uniform, rechts triangular):
 <p float="center">
-  <img src="https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/uniform%20500%2012n2.png" width="350" />
-  <img src="https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/non-uniform%20500%2012n2.png" width="350" /> 
+  <img src="https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/12n2-Uniform-500-287.png" width="350" />
+  <img src="https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/12n2-NonUniform-500-2205.png" width="350" /> 
 </p>
 Best solution for score function 1/2 * n^2:  <br />
 RANDOM - GREEDY POINTS ALGORITHM STARTS
