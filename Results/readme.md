@@ -269,3 +269,7 @@ Zoals vermeld op de vorige pagina, gebruiken we twee kansverdelingen tijdens de 
 
 ![alt-text-1](https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/uniform%20500%20n.png) "Uniform") ![alt-text-2](https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/non-uniform%20500%20n.png "Triangular")
 
+<p float="left">
+  <img src="https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/uniform%20500%20n.png" width="100" />
+  <img src="https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/non-uniform%20500%20n.png" width="100" /> 
+</p>
