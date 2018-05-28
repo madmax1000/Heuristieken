@@ -198,7 +198,7 @@ In de onderstaande scatter-plot is wederom te zien hoe het aantal breakpoints in
 
 #### Random-Greedy-Branch and Bound
 Dit algoritme gebruikt gedeeltelijk Greedy en gedeeltelijk Branch and Bound. Zo wordt de run-time drastisch versneld en wordt het exhaustive aspect van het Branch and Bound algoritme nog steeds deels benut. </br>
-De threshold voor de inzet van het Branch and Bound algoritme hebben wij gezet op 8 breakpoints. Dat betekent dat Greedy wordt uitgevoerd totdat er nog slechts 8 breakpoints over zijn. Vervolgens wordt genoom verder gemuteerd met Branch and Bound. Zie de vorige pagina voor een uitgebreide uitleg. 
+De threshold voor de inzet van het Branch and Bound algoritme hebben wij gezet op 8 breakpoints. Dat betekent dat Greedy wordt uitgevoerd totdat er nog slechts 8 breakpoints over zijn. Vervolgens wordt het genoom verder gemuteerd met Branch and Bound. Zie de vorige pagina voor een uitgebreide uitleg. 
 ...
 
 
