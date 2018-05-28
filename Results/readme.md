@@ -267,9 +267,5 @@ __Your genome has been solved with a total of  486.0 points.__
 
 Zoals vermeld op de vorige pagina, gebruiken we twee kansverdelingen tijdens de random keuze die meerdere keren wordt uitgevoerd in dit algoritme: de uniforme kansverdeling, en de triangular kansverdeling. Onze hoop was dat het gebruik van de triangular kansverdeling de run-time van het algoritme versnelt. In de onderstaande plots is te zien dat dit inderdaad het geval is!
 
-![alt text](https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/non-uniform%20500%20n.png)
-
-![alt text](https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/uniform%20500%20n.png)
-
-
+![alt-text-1](https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/uniform%20500%20n.png) "Uniform") ![alt-text-2](https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/non-uniform%20500%20n.png "Triangular")
 
