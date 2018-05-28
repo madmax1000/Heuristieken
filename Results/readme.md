@@ -1,7 +1,7 @@
 # Results
 Hier zijn de resultaten van elk van de challenges beschreven. Ook zijn er grafieken toegevoegd om de resultaten te visualiseren. 
 
-## Challenge a) Bepaal een sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Bepaal ook de grenzen van de oplossingskwaliteit en de toestandsruimte.
+### Challenge a) Bepaal een sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Bepaal ook de grenzen van de oplossingskwaliteit en de toestandsruimte.
 Voor deze challenge hebben we het Bubble Sort algoritme en het Greedy algoritme gebruikt. Zie voor een beschrijving van het Greedy algoritme de README.md file op de vorige pagina. Wij gaan er van uit dat het Bubble Sort algorimte bekend is bij de lezer. 
 
 #### Bubble Sort
@@ -10,13 +10,16 @@ Voor deze challenge hebben we het Bubble Sort algoritme en het Greedy algoritme 
 #### Greedy
 Greedy vindt in een minimale tijd (< 1 sec) een sequentie van __14 mutaties__ die het genoom van D. Melanogaster naar die van D. Miranda verandert. Een grote verbetering ten opzichte van Bubble Sort (154 mutaties)!
 
-## Challenge b) Vind de "kortste" sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Als er meerdere kortste oplossingen zijn, vergelijk ze dan met elkaar.
+### Challenge b) Vind de "kortste" sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Als er meerdere kortste oplossingen zijn, vergelijk ze dan met elkaar.
 
 #### Branch and Bound
 Zoals uitgelegd op de vorige pagina is het probleem met Greedy dat je niet zeker weet of de kortste sequentie mutaties gevonden is. Om daadwerkelijk de kortste sequentie mutaties te vinden gebruiken wij het exhaustive Branch and Bound algoritme, dat _gegarandeerd_ de kortste sequentie mutaties vindt.<br />
-Omdat de run-time van het Branch and Bound algoritme voor grote genomen (zoals het Melanogaster genoom...) extreem lang is, hebben wij het Branch and Bound algoritme niet volledig kunnen laten draaien. De run-time van het Branch and Bound algoritme is positief gecorreleerd met het aantal breakpoints in het originele genoom. Immers, meer breakpoints genereren meer opties om uit te voeren en dus een grotere boom die meer tijd kost om te doorlopen. Zie hier een scatter-plot die deze positieve correlatie weergeeft. De tijd is weergeven in seconden.
+Omdat de run-time van het Branch and Bound algoritme voor grote genomen extreem lang is, hebben wij het Branch and Bound algoritme voor het Melanogaster genoom niet volledig kunnen laten draaien. De run-time van het Branch and Bound algoritme is positief gecorreleerd met het aantal breakpoints in het originele genoom. Immers, meer breakpoints genereren meer opties om uit te voeren en dus een grotere boom die meer tijd kost om te doorlopen. Zie hier een scatter-plot die deze positieve correlatie weergeeft. De tijd is weergeven in seconden.
 ....
 
+
+In de onderstaande scatter-plot is wederom te zien hoe het aantal breakpoints in het originele genoom zich verhoudt tot het minimale aantal mutatie stappen die uitgevoerd moeten worden om het genoom op te lossen. Aangezien voor het genereren van deze plot het Branch and Bound algoritme is gebruikt, weten we zeker dat dit daadwerkelijk het _minimale_ aantal mutaties is dat uitgevoerd moest worden voor dat specifieke genoom van een bepaalde lengte. 
+...
 
 #### Random-Greedy-Branch and Bound
 Voor ons derde algoritme is een zelf bedachte constructie gebruikt. We wilden het aspect dat Branch and Bound altijd zorgt voor de allerbeste oplossing behouden. Het probleem dat echter opgelost moet worden is dat de run time veel te lang is bij grote (lengte 23 +) genomen. Als oplossing hiervoor hebben we het volgende algoritme bedacht. <br />
