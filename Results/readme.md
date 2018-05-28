@@ -266,8 +266,13 @@ __Your genome has been solved with a total of  486.0 points.__
 #### Random-Greedy Points
 
 Zoals vermeld op de vorige pagina, gebruiken we twee kansverdelingen tijdens de random keuze die meerdere keren wordt uitgevoerd in dit algoritme: de uniforme kansverdeling, en de triangular kansverdeling. Onze hoop was dat het gebruik van de triangular kansverdeling de run-time van het algoritme versnelt. In de onderstaande plots is te zien dat dit inderdaad het geval is!
-
-<p float="left">
+<br />
+Voor scorefunctie __n__:
+<p float="center">
   <img src="https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/uniform%20500%20n.png" width="350" title="Uniform" />
   <img src="https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/non-uniform%20500%20n.png" width="350" title="Triangular" /> 
 </p>
+
+Voor scorefunctie __1/2 n^2__:
+
+
