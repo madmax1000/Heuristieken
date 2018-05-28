@@ -19,7 +19,7 @@ Omdat de run-time van het Branch and Bound algoritme voor grote genomen extreem 
 
 
 In de onderstaande scatter-plot is wederom te zien hoe het aantal breakpoints in het originele genoom zich verhoudt tot het minimale aantal mutatie stappen die uitgevoerd moeten worden om het genoom op te lossen. Aangezien voor het genereren van deze plot het Branch and Bound algoritme is gebruikt, weten we zeker dat dit daadwerkelijk het _minimale_ aantal mutaties is dat uitgevoerd moest worden voor dat specifieke genoom van een bepaalde lengte. 
-...
+![alt text](http://url/to/img.png)
 
 #### Random-Greedy-Branch and Bound
 Voor ons derde algoritme is een zelf bedachte constructie gebruikt. We wilden het aspect dat Branch and Bound altijd zorgt voor de allerbeste oplossing behouden. Het probleem dat echter opgelost moet worden is dat de run time veel te lang is bij grote (lengte 23 +) genomen. Als oplossing hiervoor hebben we het volgende algoritme bedacht. <br />
