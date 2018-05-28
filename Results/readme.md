@@ -213,6 +213,9 @@ Om een indicatie te geven van het aantal iteraties dat nodig is voor het algorit
 
 Het moge dus duidelijk zijn dat dit algoritme beter is dan het Greedy algoritme, aangezien er een kortere sequentie van mutaties wordt gevonden. Een algemeen voordeel van dit algoritme is dat de lengte van het genoom nauwelijks invloed heeft op de run-time. Dit komt omdat de lengte van het genoom nauwelijks invloed heeft op de run-time van het Greedy gedeelte, en het Branch and Bound gedeelte pas begint vanaf een bepaalde threshold, waardoor het Branch and Bound gedeelte óók ongeveer dezelfde run-time blijft behouden!
 
+
+## Challenge c) Schrijf een algoritme dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert, in zo min mogelijk mutatiepunten. EN challenge d) Een alternatieve scoreformule geeft ½n2 mutatiepunten voor mutaties van lengte n. Grote mutaties worden zo dus "nog" onwaarschijnlijker. Zoek wederom naar een mutatiesequentie die het genoom van D. Melanogaster in het genoom van D. Miranda verandert in zo min mogelijk mutatiepunten.
+
 #### Greedy Points
 Greedy vindt voor het Melanogaster genoom met __score functie n__ in een minimale tijd (< 1 sec) een sequentie mutaties van totaal __100 punten__ die het genoom van D. Melanogaster naar die van D. Miranda verandert. <br />
 
@@ -266,7 +269,7 @@ __Your genome has been solved with a total of  486.0 points.__
 #### Random-Greedy Points
 
 Zoals vermeld op de vorige pagina, gebruiken we twee kansverdelingen tijdens de random keuze die meerdere keren wordt uitgevoerd in dit algoritme: de uniforme kansverdeling, en de triangular kansverdeling. Onze hoop was dat het gebruik van de triangular kansverdeling de run-time van het algoritme versnelt. In de onderstaande plots is te zien dat dit voor dit specifieke geval inderdaad zo is.
-<br />
+<br /><br />
 Voor scorefunctie __n__ (links uniform, rechts triangular):
 <p float="center">
   <img src="https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/uniform%20500%20n.png" width="350" title="Uniform" />
@@ -278,3 +281,9 @@ Voor scorefunctie __1/2 n^2__ (links uniform, rechts triangular):
   <img src="https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/uniform%20500%2012n2.png" width="350" />
   <img src="https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/non-uniform%20500%2012n2.png" width="350" /> 
 </p>
+
+## Challenge e) Maak een test-set met 100 random-volgorde genomen van lengte 25. Sorteer ze met je algoritmes en probeer zicht te krijgen op het minimale aantal mutatiepunten dat nodig is om een genoom gesorteerd te krijgen. Probeer wederom een boven- en ondergrens vast te stellen als je kunt.
+
+
+
+
