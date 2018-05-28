@@ -168,6 +168,24 @@ Your genome has been solved in  154  mutations!
 #### Greedy
 Greedy vindt in een minimale tijd (< 1 sec) een sequentie van __14 mutaties__ die het genoom van D. Melanogaster naar die van D. Miranda verandert. Een grote verbetering ten opzichte van Bubble Sort (154 mutaties)!
 
+GREEDY ALGORITHM STARTS<br />
+<br />
+Mutation number:  1   [0, 23, 1, 2, 11, 24, 22, 19, 20, 25, 7, 10, 6, 5, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9, 26]<br />
+Mutation number:  2   [0, 23, 1, 2, 11, 24, 22, 19, 20, 25, 7, 10, 6, 5, 4, 3, 21, 17, 16, 15, 14, 13, 12, 18, 8, 9, 26]<br />
+Mutation number:  3   [0, 23, 1, 2, 11, 24, 22, 19, 20, 25, 7, 10, 6, 5, 4, 3, 21, 12, 13, 14, 15, 16, 17, 18, 8, 9, 26]<br />
+Mutation number:  4   [0, 23, 1, 2, 11, 24, 22, 19, 20, 25, 7, 10, 9, 8, 18, 17, 16, 15, 14, 13, 12, 21, 3, 4, 5, 6, 26]<br />
+Mutation number:  5   [0, 23, 1, 2, 11, 24, 22, 19, 20, 25, 7, 6, 5, 4, 3, 21, 12, 13, 14, 15, 16, 17, 18, 8, 9, 10, 26]<br />
+Mutation number:  6   [0, 23, 1, 2, 11, 24, 22, 19, 20, 25, 18, 17, 16, 15, 14, 13, 12, 21, 3, 4, 5, 6, 7, 8, 9, 10, 26]<br />
+Mutation number:  7   [0, 23, 1, 2, 11, 24, 22, 19, 20, 10, 9, 8, 7, 6, 5, 4, 3, 21, 12, 13, 14, 15, 16, 17, 18, 25, 26]<br />
+Mutation number:  8   [0, 23, 1, 2, 11, 24, 22, 21, 3, 4, 5, 6, 7, 8, 9, 10, 20, 19, 12, 13, 14, 15, 16, 17, 18, 25, 26]<br />
+Mutation number:  9   [0, 23, 1, 2, 11, 24, 22, 21, 3, 4, 5, 6, 7, 8, 9, 10, 20, 19, 18, 17, 16, 15, 14, 13, 12, 25, 26]<br />
+Mutation number:  10   [0, 23, 1, 2, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 10, 9, 8, 7, 6, 5, 4, 3, 21, 22, 24, 25, 26]<br />
+Mutation number:  11   [0, 23, 1, 2, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 21, 22, 24, 25, 26]<br />
+Mutation number:  12   [0, 23, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26]<br />
+Mutation number:  13   [0, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 24, 25, 26]<br />
+Mutation number:  14   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]<br />
+Your genome has been solved in  14  mutations!
+
 ### Challenge b) Vind de "kortste" sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Als er meerdere kortste oplossingen zijn, vergelijk ze dan met elkaar.
 
 #### Branch and Bound
