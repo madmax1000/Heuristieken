@@ -199,7 +199,7 @@ In de onderstaande scatter-plot is wederom te zien hoe het aantal breakpoints in
 #### Random-Greedy-Branch and Bound
 Dit algoritme gebruikt gedeeltelijk Greedy en gedeeltelijk Branch and Bound. Zo wordt de run-time drastisch versneld en wordt het exhaustive aspect van het Branch and Bound algoritme nog steeds deels benut. </br>
 De threshold voor de inzet van het Branch and Bound algoritme hebben wij gezet op 8 breakpoints. Dat betekent dat Greedy wordt uitgevoerd totdat er nog slechts 8 breakpoints over zijn. Vervolgens wordt het genoom verder gemuteerd met Branch and Bound. Zie de vorige pagina voor een uitgebreide uitleg. <br />
-Dit algoritme vindt voor het Melanogaster genoom met 150 iteraties meerdere sequenties van __13 mutaties__. Éen van deze oplossingen is hier onder weergeven in de vorm (i, j): <br />
+Dit algoritme vindt in een zeer geringe tijd (< 3 sec) voor het Melanogaster genoom met 150 iteraties meerdere sequenties van __13 mutaties__. Dit is dus een verbetering ten opzichte van het Greedy algoritme en tevens onze beste oplossing! Éen van deze oplossingen is hier onder weergeven in de vorm (i, j): <br />
 
 RANDOM - GREEDY - BRANCH AND BOUND ALGORITHM STARTS<br />
 <br />
@@ -207,6 +207,10 @@ Greedy part: (8, 12) (14, 24), (17, 22), (12, 25), (7, 13), (11, 25), (16, 24), 
 Branch and Bound part: (1, 23), (3, 7), (8, 21) <br />
 __Your genome has been solved in  13  mutations!__
 
+<br />
+Om een indicatie te geven van het aantal iteraties dat nodig is voor het algoritme om een sequentie van 13 mutaties te vinden, hebben we het Melanogaster genoom duizend keer opgelost met 150 iteraties. Hier onder is een histogram weergeven dat laat zien op welke iteratie er een oplossing van 13 mutaties is gevonden. 
+![alt text](https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/iterations%20until%20a%20sequence%20of%2013%20has%20been%20found.png)
+Het moge dus duidelijk zijn dat dit algoritme beter is dan het Greedy algoritme, aangezien er een kortere sequentie van mutaties wordt gevonden. Een algemeen voordeel van dit algoritme is dat de lengte van het genoom nauwelijks invloed heeft op de run-time. Dit komt omdat de lengte van het genoom nauwelijks invloed heeft op de run-time van het Greedy gedeelte, en het Branch and Bound gedeelte pas begint vanaf een bepaalde threshold, waardoor het Branch and Bound gedeelte óók ongeveer dezelfde run-time blijft behouden!
 
 #### Greedy Points
 Greedy vindt voor het Melanogaster genoom in een minimale tijd (< 1 sec) een sequentie mutaties van totaal __100 punten__ die het genoom van D. Melanogaster naar die van D. Miranda verandert.
