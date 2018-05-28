@@ -44,7 +44,7 @@ Als er geen 2 breakpoints verwijderd kunnen worden, zal Greedy kiezen om een mut
 
 #### Branch and Bound
 Het probleem met Greedy is dat je niet zeker kan weten of de kortste sequentie mutaties gevonden is. Om daadwerkelijk de kortste sequentie mutaties te vinden gebruiken wij het Branch and Bound algoritme.<br />
-Dit algoritme vindt _gegarandeerd_ de korste sequentie mutaties! Dit gaat echter ten koste aan een zeer veel langere run-time.<br /><br />
+Dit algoritme vindt _gegarandeerd_ de korste sequentie mutaties! Dit gaat echter ten koste aan een zeer veel langere run-time.
 
 #### Random-Greedy-Branch and Bound
 Voor ons derde algoritme is een zelf bedachte constructie gebruikt. We wilden het aspect dat Branch and Bound altijd zorgt voor de allerbeste oplossing behouden. Het probleem dat echter opgelost moet worden is dat de run time veel te lang is bij grote (lengte 23 +) genomen. Als oplossing hiervoor hebben we het volgende algoritme bedacht. <br />
