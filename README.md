@@ -47,13 +47,21 @@ Het probleem met Greedy is dat je niet zeker kan weten of de kortste sequentie m
 Dit algoritme vindt _gegarandeerd_ de korste sequentie mutaties! Dit gaat echter ten koste aan een zeer veel langere run-time.<br /><br />
 
 #### Random-Greedy-Branch and Bound
-Voor ons derde algoritme is een zelf bedachte constructie gebruikt. We wilden het aspect dat Branch and Bound altijd zorgt voor de allerbeste oplossing behouden. Het probleem dat we nu moesten oplossen is dus de run time veel te lang is bij lange (lengte 23 +) genomen. Als oplossing hiervoor laten we de Branch and Bound pas runnen vanaf genomen, die een door ons ingesteld aantal breakpoints zijn verwijdert vanaf een genoom wat volledig op volgorde staat. Om te komen op het punt waarop het branch and bound algoritme te runnen, zal er eerst vanaf et originele genoom een random mutatie gekozen worden, welke vervolgens zal worden gemuteerd via greedy, tot het punt waarop de branch and bound kan worden ingezet. Vervolgens wordt op de volgende depth vanaf het originele genoom een nieuwe random mutatie gekozen vervolgt door greedy-branch and bound. Dit blijft doorgaan tot de grens van de branch and bound waarna vervolgens een nieuwe eerste mutatie wordt gekozen vanaf het originele genoom.
+Voor ons derde algoritme is een zelf bedachte constructie gebruikt. We wilden het aspect dat Branch and Bound altijd zorgt voor de allerbeste oplossing behouden. Het probleem dat echter opgelost moet worden is dat de run time veel te lang is bij grote (lengte 23 +) genomen. Als oplossing hiervoor hebben we het volgende algoritme bedacht. <br />
+1. Kies een _random_ mutatie uit het originele genoom (depth = 0) en voer deze uit. <br />
+2. Start vervolgens met het uitvoeren van het Greedy algoritme. <br />
+3. STOP met Greedy uitvoeren als het aantal breakpoints in het genoom kleiner of gelijk is aan 8 (dit is een arbitrair gekozen threshold).<br />
+4. BEGIN vervolgens met het uitvoeren van het Branch and Bound algoritme totdat het genoom is opgelost. <br />
+5. Start opnieuw bij stap 1. Echter nu op depth = 1. Blijf deze loop uitvoeren totdat Greedy niet meer uitgevoerd wordt omdat het aantal breakpoints in het gemuteerde genoom reeds kleiner of gelijk is aan 8 (de arbitrair gekozen threshold). <br />
+6. Voer stappen 1 tm 5 geheel opnieuw uit voor een vooraf bepaald aantal iteraties. Bewaar de kortse sequentie mutaties wanneer alle iteraties uitgevoerd zijn. Dit is de uiteindelijke oplossing. <br />
+
+Met deze constructie hebben we geen last van de extreem lange run-time van het Branch and Bound algoritme, maar benutten we tegelijkertijd wél de exhausitve eigenschap van het Branch and Bound (alhoewel dit dus pas benut wordt _vanaf_ 8 of minder breakpoints). Vóór de treshold zijn we overgeleverd aan het non-exhaustive Greedy algoritme. 
 
 #### Greedy Points
-Dit algoritme is bedoelt om genoom sequenties op te lossen in een laag aantal mutatie punten. Het werkt op dezelfde manier als ons vorig greedy algoritme, het enige verschil is dat we hier steeds de mutatie kiezen die het meest aantal breakpoints oplossen voor het minst aantal punten.
+Dit algoritme is bedoelt om genoom sequenties op te lossen in een laag aantal mutatie punten. Het werkt op dezelfde manier als ons vorig greedy algoritme, het enige verschil is dat we hier steeds de mutatie kiezen die het meeste aantal breakpoints oplost voor het minst aantal punten.
 
 #### Random-Greedy Points
-Dit is ons tweede algoritme om genoom sequenties op te lossen in een laag aantal mutatie punten. Het algoritme lijkt op het Random-Greedy-Branch and Bound algoritme, het verschil hier is dat we de branch and bound niet gebruiken, aangezien dit niet werkt voor mutatie punnten. 
+Dit is ons tweede algoritme om genoom sequenties op te lossen in een laag aantal mutatie punten. Het algoritme lijkt op het Random-Greedy-Branch and Bound algoritme, het verschil hier is dat we de Branch and Bound niet gebruiken, aangezien dit niet werkt voor mutatie punnten. 
 
 
 ## Auteurs
