@@ -209,9 +209,8 @@ __Your genome has been solved in  13  mutations!__
 
 <br />
 Om een indicatie te geven van het aantal iteraties dat nodig is voor het algoritme om een sequentie van 13 mutaties te vinden, hebben we het Melanogaster genoom duizend keer opgelost met 150 iteraties. Hier onder is een histogram weergeven dat laat zien op welke iteratie er een oplossing van 13 mutaties is gevonden. 
-![alt text](https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/iterations%20until%20a%20sequence%20of%2013%20has%20been%20found.png)
+![alt text](https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/13.png)
 
-x
 
 Het moge dus duidelijk zijn dat dit algoritme beter is dan het Greedy algoritme, aangezien er een kortere sequentie van mutaties wordt gevonden. Een algemeen voordeel van dit algoritme is dat de lengte van het genoom nauwelijks invloed heeft op de run-time. Dit komt omdat de lengte van het genoom nauwelijks invloed heeft op de run-time van het Greedy gedeelte, en het Branch and Bound gedeelte pas begint vanaf een bepaalde threshold, waardoor het Branch and Bound gedeelte óók ongeveer dezelfde run-time blijft behouden!
 
