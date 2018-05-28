@@ -274,5 +274,9 @@ Voor scorefunctie __n__:
 </p>
 
 Voor scorefunctie __1/2 n^2__:
-
-
+<p float="center">
+  <img src="https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/uniform%20500%201:2n2.png
+" width="350" title="Uniform" />
+  <img src="https://github.com/madmax1000/Heuristieken/blob/master/Results/Images/non-uniform%20500%201:2n2.png
+" width="350" title="Triangular" /> 
+</p>
