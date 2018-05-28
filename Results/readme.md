@@ -5,7 +5,7 @@ Hier zijn de resultaten van elk van de challenges beschreven. Ook zijn er grafie
 Voor deze challenge hebben we het Bubble Sort algoritme en het Greedy algoritme gebruikt. Zie voor een beschrijving van het Greedy algoritme de README.md file op de vorige pagina. Wij gaan er van uit dat het Bubble Sort algorimte bekend is bij de lezer. 
 
 #### Bubble Sort
-Bubble Sort vindt voor het Melanogaster genoom in een zeer geringe tijd (< 1 sec) een sequentie van __154 mutaties__ die het genoom van D. Melanogaster naar die van D. Miranda verandert.<\br>
+Bubble Sort vindt voor het Melanogaster genoom in een zeer geringe tijd (< 1 sec) een sequentie van __154 mutaties__ die het genoom van D. Melanogaster naar die van D. Miranda verandert.<br />
 
 BUBBLE ALGORITHM STARTS<br />
 <br />
