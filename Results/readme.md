@@ -163,7 +163,7 @@ Mutation number:  151   [0, 1, 2, 5, 3, 6, 4, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1
 Mutation number:  152   [0, 1, 2, 5, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]<br />
 Mutation number:  153   [0, 1, 2, 3, 5, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]<br />
 Mutation number:  154   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]<br />
-Your genome has been solved in  154  mutations!
+__Your genome has been solved in  154  mutations!__
 
 #### Greedy
 Greedy vindt voor het Melanogaster genoom in een minimale tijd (< 1 sec) een sequentie van __14 mutaties__ die het genoom van D. Melanogaster naar die van D. Miranda verandert. Een grote verbetering ten opzichte van Bubble Sort (154 mutaties)!
@@ -184,7 +184,7 @@ Mutation number:  11   [0, 23, 1, 2, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10,
 Mutation number:  12   [0, 23, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 24, 25, 26]<br />
 Mutation number:  13   [0, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 24, 25, 26]<br />
 Mutation number:  14   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]<br />
-Your genome has been solved in  14  mutations!
+__Your genome has been solved in  14  mutations!__
 
 ### Challenge b) Vind de "kortste" sequentie van mutaties dat het genoom van D. Melanogaster in het genoom van D. Miranda verandert. Als er meerdere kortste oplossingen zijn, vergelijk ze dan met elkaar.
 
@@ -198,8 +198,14 @@ In de onderstaande scatter-plot is wederom te zien hoe het aantal breakpoints in
 
 #### Random-Greedy-Branch and Bound
 Dit algoritme gebruikt gedeeltelijk Greedy en gedeeltelijk Branch and Bound. Zo wordt de run-time drastisch versneld en wordt het exhaustive aspect van het Branch and Bound algoritme nog steeds deels benut. </br>
-De threshold voor de inzet van het Branch and Bound algoritme hebben wij gezet op 8 breakpoints. Dat betekent dat Greedy wordt uitgevoerd totdat er nog slechts 8 breakpoints over zijn. Vervolgens wordt het genoom verder gemuteerd met Branch and Bound. Zie de vorige pagina voor een uitgebreide uitleg. 
-...
+De threshold voor de inzet van het Branch and Bound algoritme hebben wij gezet op 8 breakpoints. Dat betekent dat Greedy wordt uitgevoerd totdat er nog slechts 8 breakpoints over zijn. Vervolgens wordt het genoom verder gemuteerd met Branch and Bound. Zie de vorige pagina voor een uitgebreide uitleg. <br />
+Dit algoritme vindt voor het Melanogaster genoom met 150 iteraties meerdere sequenties van __13 mutaties__. Éen van deze oplossingen is hier onder weergeven in de vorm (i, j): <br />
+
+RANDOM - GREEDY - BRANCH AND BOUND ALGORITHM STARTS<br />
+<br />
+Greedy part: (8, 12) (14, 24), (17, 22), (12, 25), (7, 13), (11, 25), (16, 24), (5, 24), (4, 19), (2, 23) <br />
+Branch and Bound part: (1, 23), (3, 7), (8, 21) <br />
+__Your genome has been solved in  13  mutations!__
 
 
 #### Greedy Points
