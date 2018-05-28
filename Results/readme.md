@@ -218,3 +218,4 @@ Dit is ons tweede algoritme om genoom sequenties op te lossen in een laag aantal
 4. Start opnieuw bij stap 1. Echter nu op depth = depth + 1 (dus nu vanáf de voorgaande random uitgevoerde mutatie!). <br />
 6. Voer stappen 1 tm 5 geheel opnieuw uit voor een vooraf bepaald aantal iteraties. Bewaar de sequentie mutaties met de laagste _upperbound_ wanneer alle iteraties uitgevoerd zijn. Dit is de uiteindelijke oplossing. <br />
 <br />
+x
