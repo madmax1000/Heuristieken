@@ -214,9 +214,9 @@ Om een indicatie te geven van het aantal iteraties dat nodig is voor het algorit
 Het moge dus duidelijk zijn dat dit algoritme beter is dan het Greedy algoritme, aangezien er een kortere sequentie van mutaties wordt gevonden. Een algemeen voordeel van dit algoritme is dat de lengte van het genoom nauwelijks invloed heeft op de run-time. Dit komt omdat de lengte van het genoom nauwelijks invloed heeft op de run-time van het Greedy gedeelte, en het Branch and Bound gedeelte pas begint vanaf een bepaalde threshold, waardoor het Branch and Bound gedeelte óók ongeveer dezelfde run-time blijft behouden!
 
 #### Greedy Points
-Greedy vindt voor het Melanogaster genoom in een minimale tijd (< 1 sec) een sequentie mutaties van totaal __100 punten__ die het genoom van D. Melanogaster naar die van D. Miranda verandert. <br />
+Greedy vindt voor het Melanogaster genoom met __score functie n__ in een minimale tijd (< 1 sec) een sequentie mutaties van totaal __100 punten__ die het genoom van D. Melanogaster naar die van D. Miranda verandert. <br />
 
-GREEDY POINTS ALGORITHM STARTS <br />
+GREEDY POINTS ALGORITHM STARTS<br />
 <br />
 Your original genome looks like:  [0, 23, 1, 2, 11, 24, 22, 19, 6, 10, 7, 25, 20, 5, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9, 26]<br />
 Mutated genome:  [0, 23, 1, 2, 11, 24, 22, 19, 10, 6, 7, 25, 20, 5, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9, 26] (+ 2  points)<br />
@@ -237,6 +237,31 @@ Mutated genome:  [0, 1, 2, 22, 23, 24, 25, 20, 19, 18, 17, 16, 15, 14, 13, 12, 
 Mutated genome:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 24, 23, 22, 21, 26] (+ 22  points)<br />
 Mutated genome:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26] (+ 5  points)<br />
 __Your genome has been solved with a total of  100 points.__
+
+Greedy vindt voor het Melanogaster genoom met __score functie 1/2 n^2__ in een minimale tijd (< 1 sec) een sequentie mutaties van totaal __486 punten__ die het genoom van D. Melanogaster naar die van D. Miranda verandert. <br />
+
+GREEDY POINTS ALGORITHM STARTS<br />
+<br />
+Your original genome looks like:  [0, 23, 1, 2, 11, 24, 22, 19, 6, 10, 7, 25, 20, 5, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9, 26]<\br>
+Mutated genome:  [0, 23, 1, 2, 11, 24, 22, 19, 10, 6, 7, 25, 20, 5, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9, 26] (+  2.0  points)<\br>
+Mutated genome:  [0, 11, 2, 1, 23, 24, 22, 19, 10, 6, 7, 25, 20, 5, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9, 26] (+  8.0  points)<\br>
+Mutated genome:  [0, 11, 2, 1, 24, 23, 22, 19, 10, 6, 7, 25, 20, 5, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9, 26] (+  2.0  points)<\br>
+Mutated genome:  [0, 1, 2, 11, 24, 23, 22, 19, 10, 6, 7, 25, 20, 5, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9, 26] (+  4.5  points)<\br>
+Mutated genome:  [0, 1, 2, 11, 24, 23, 22, 19, 10, 20, 25, 7, 6, 5, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9, 26] (+  8.0  points)<\br>
+Mutated genome:  [0, 1, 2, 11, 24, 23, 22, 10, 19, 20, 25, 7, 6, 5, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9, 26] (+  2.0  points)<\br>
+Mutated genome:  [0, 1, 2, 11, 24, 23, 22, 10, 19, 20, 25, 5, 6, 7, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9, 26] (+  4.5  points)<\br>
+Mutated genome:  [0, 1, 2, 22, 23, 24, 11, 10, 19, 20, 25, 5, 6, 7, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9, 26] (+  8.0  points)<\br>
+Mutated genome:  [0, 1, 2, 22, 23, 24, 25, 20, 19, 10, 11, 5, 6, 7, 8, 18, 12, 13, 14, 15, 16, 17, 21, 3, 4, 9, 26] (+  12.5  points)<\br>
+Mutated genome:  [0, 1, 2, 22, 23, 24, 25, 20, 19, 10, 11, 5, 6, 7, 8, 18, 17, 16, 15, 14, 13, 12, 21, 3, 4, 9, 26] (+  18.0  points)<\br>
+Mutated genome:  [0, 1, 2, 22, 23, 24, 25, 20, 19, 10, 11, 12, 13, 14, 15, 16, 17, 18, 8, 7, 6, 5, 21, 3, 4, 9, 26] (+  60.5  points)<\br>
+Mutated genome:  [0, 1, 2, 22, 23, 24, 25, 20, 19, 10, 11, 12, 13, 14, 15, 16, 17, 18, 8, 7, 6, 5, 4, 3, 21, 9, 26] (+  4.5  points)<\br>
+Mutated genome:  [0, 1, 2, 22, 23, 24, 25, 20, 19, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 3, 4, 5, 6, 7, 8, 9, 26] (+  24.5  points)<\br>
+Mutated genome:  [0, 1, 2, 22, 23, 24, 25, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 21, 3, 4, 5, 6, 7, 8, 9, 26] (+  40.5  points)<\br>
+Mutated genome:  [0, 1, 2, 22, 23, 24, 25, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 21, 26] (+  32.0  points)<\br>
+Mutated genome:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 24, 23, 22, 21, 26] (+  242.0  points)<\br>
+Mutated genome:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26] (+  12.5  points)<\br>
+Your genome has been solved with a total of  486.0 points.
+
 
 #### Random-Greedy Points
 
