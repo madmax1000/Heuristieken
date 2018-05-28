@@ -260,17 +260,10 @@ Mutated genome:  [0, 1, 2, 22, 23, 24, 25, 20, 19, 18, 17, 16, 15, 14, 13, 12, 
 Mutated genome:  [0, 1, 2, 22, 23, 24, 25, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 21, 26] (+  32.0  points)<br />
 Mutated genome:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 24, 23, 22, 21, 26] (+  242.0  points)<br />
 Mutated genome:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26] (+  12.5  points)<br />
-Your genome has been solved with a total of  486.0 points.
+__Your genome has been solved with a total of  486.0 points.__
 
 
 #### Random-Greedy Points
 
+Zoals vermeld op de vorige pagina, gebruiken we twee kansverdelingen tijdens de random keuze die meerdere keren wordt uitgevoerd in dit algoritme: de uniforme kansverdeling, en de triangular kansverdeling. Onze hoop was dat het gebruik van de triangular kansverdeling de run-time van het algoritme versnelt. In de onderstaande plots is te zien dat dit inderdaad het geval is!
 
-Dit is ons tweede algoritme om genoom sequenties op te lossen in een laag aantal mutatie punten. Het algoritme lijkt op het Random-Greedy-Branch and Bound algoritme, het verschil hier is dat we de Branch and Bound niet gebruiken. De reden hiervoor is dat er een lowerbound vastgesteld moet worden om Branch and Bound te gebruiken. Het vinden van een lowerbound in termen van mutatie _punten_ voor een willekeurig genoom is niet triviaal. Het algoritme ziet er als volgt uit. <br />
-1. Los het genoom op met Greedy. Zet _upperbound_ gelijk aan het aantal mutatiepunten dat deze Greedy vond. <br />
-2. Kies een _random_ mutatie uit het originele genoom (depth = 0) en voer deze uit. <br />
-3. Start vervolgens met het uitvoeren van het Greedy algoritme totdat het genoom is opgelost. Als dit aantal mutatiepunten lager is dan _upperbound_, update dan de _upperbound_. <br />
-4. Start opnieuw bij stap 1. Echter nu op depth = depth + 1 (dus nu vanáf de voorgaande random uitgevoerde mutatie!). <br />
-6. Voer stappen 1 tm 5 geheel opnieuw uit voor een vooraf bepaald aantal iteraties. Bewaar de sequentie mutaties met de laagste _upperbound_ wanneer alle iteraties uitgevoerd zijn. Dit is de uiteindelijke oplossing. <br />
-<br />
-x
